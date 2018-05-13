@@ -1,8 +1,34 @@
-Given ('Insert a sentence'):
+# Bold Text
+Given ('Sample sentence'):
+  This is a sample
+
+Do ('bold'):
+  A sentence\<ESC>
+  :source ../asciidoc-sane/asciidoc-sane.vim\<cr>
+  :Bold\<CR>
+
+Expect ('Asterisk wrapping around last word'):
+  This is a sample *sentence*
+
+# Italics text
+Given ('Sample sentence'):
   This is a sample sentence
 
-Do ('Surround last word with *'):
-  $Bi*\<Esc>ea*
+Do ('$Bi_\<ESC>ea_'):
+  $Bi_\<ESC>ea_
 
-Expect ('Asterisk wrapping arounf last word'):
-  This is a sample *sentence*
+Expect ('Underscore wrapping around last word'):
+  This is a sample _sentence_
+
+# monospace text
+Given ('Sample sentence'):
+  This is a sample sentence
+
+Do ('$Bi`\<ESC>ea`'):
+  $Bi`\<ESC>ea`
+
+Expect ('Backticks wrapping around last word'):
+  This is a sample `sentence`
+
+# Subscript Text
+# Superscript Text

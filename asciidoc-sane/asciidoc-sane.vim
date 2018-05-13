@@ -6,12 +6,16 @@
 " Sane human friendly insert mode mapping for asciidoc markup
 
 
-function! Bold()
-    execute "normal!  Bi#\<esc>ea#\<esc>"
+function! WrapLastWord(delimiter)
+    let l:command = "normal! Bi" . a:delimiter . "\<ESC>ea" . a:delimiter
+    execute l:command
+    return l:command
 endfunction
 
+command! -nargs=0 -buffer Bold      :call WrapLastWord('*')
+command! -nargs=0 -buffer Italics   :call WrapLastWord('_')
+command! -nargs=0 -buffer Monospace :call WrapLastWord('`')
 
-nnoremap <buffer> r :call Bold()<CR>
 " END
 
 
