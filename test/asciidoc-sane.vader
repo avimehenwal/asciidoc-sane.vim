@@ -1,0 +1,8 @@
+Given ('Insert a sentence'):
+  This is a sample sentence
+
+Do ('Surround last word with *'):
+  $Bi*\<Esc>ea*
+
+Expect ('Asterisk wrapping arounf last word'):
+  This is a sample *sentence*
