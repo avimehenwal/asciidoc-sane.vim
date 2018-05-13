@@ -26,11 +26,11 @@ command! -nargs=0 -buffer Italics   :call WrapLastWord('_')
 command! -nargs=0 -buffer Monospace :call WrapLastWord('`')
 command! -nargs=0 -buffer Hotlink   :call WrapLastWord('|')
 
-command! -nargs=0 -buffer Heading1 :call Heading(0)
-command! -nargs=0 -buffer Heading2 :call Heading(1)
-command! -nargs=0 -buffer Heading3 :call Heading(2)
-command! -nargs=0 -buffer Heading4 :call Heading(3)
-command! -nargs=0 -buffer Heading5 :call Heading(4)
-command! -nargs=0 -buffer Heading6 :call Heading(5)
+nnoremap <Leader>1 :call Heading(0)<CR>
+nnoremap <Leader>2 :call Heading(1)<CR>
+nnoremap <Leader>3 :call Heading(2)<CR>
+nnoremap <Leader>4 :call Heading(3)<CR>
+nnoremap <Leader>5 :call Heading(4)<CR>
+nnoremap <Leader>6 :call Heading(5)<CR>
 
 " END
