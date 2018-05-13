@@ -4,4 +4,4 @@ Sane insert-mode keybindings for formatting asciidoc in vim
 
 This project aims at providing sane and humanly insert mode key binding while editing or writing asciidoc markup files.
 
-
+https://vi.stackexchange.com/questions/3732/vimscript-help-with-autoloading-scope-sid

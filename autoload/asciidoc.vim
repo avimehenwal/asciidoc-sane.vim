@@ -5,6 +5,10 @@
 "
 " Sane human friendly insert mode mapping for asciidoc markup
 
+if exists("g:loaded_asciidoc")
+  finish
+endif
+let g:loaded_asciidoc = 1
 
 " Save cpoptions.
 let s:cpo_save = &cpo
@@ -26,20 +30,8 @@ function! asciidoc#Heading(size)
     endif
 endfunction
 
-
-command! -nargs=0 -buffer Bold      :call asciidoc#WrapLastWord('*')
-command! -nargs=0 -buffer Italics   :call asciidoc#WrapLastWord('_')
-command! -nargs=0 -buffer Monospace :call asciidoc#WrapLastWord('`')
-command! -nargs=0 -buffer Hotlink   :call asciidoc#WrapLastWord('|')
-
-nnoremap <Leader>1 :call asciidoc#Heading(0)<CR>
-nnoremap <Leader>2 :call asciidoc#Heading(1)<CR>
-nnoremap <Leader>3 :call asciidoc#Heading(2)<CR>
-nnoremap <Leader>4 :call asciidoc#Heading(3)<CR>
-nnoremap <Leader>5 :call asciidoc#Heading(4)<CR>
-nnoremap <Leader>6 :call asciidoc#Heading(5)<CR>
-
-
 " Restore cpotions.
 let &cpo = s:cpo_save
 unlet s:cpo_save
+
+" END
