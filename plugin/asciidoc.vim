@@ -22,16 +22,17 @@ command! -nargs=0 Italics   call asciidoc#WrapLastWord('_')
 command! -nargs=0 Monospace call asciidoc#WrapLastWord('`')
 command! -nargs=0 Hotlink   call asciidoc#WrapLastWord('|')
 
-nnoremap <Leader>1 :Heading1<CR>
-nnoremap <Leader>2 :Heading2<CR>
-nnoremap <Leader>3 :Heading3<CR>
-nnoremap <Leader>4 :Heading4<CR>
-nnoremap <Leader>5 :Heading5<CR>
-nnoremap <Leader>6 :Heading6<CR>
+if !exists("g:asciidoc_no_mappings") || ! g:asciidoc_no_mappings
+    nnoremap <Leader>1 :Heading1<CR>
+    nnoremap <Leader>2 :Heading2<CR>
+    nnoremap <Leader>3 :Heading3<CR>
+    nnoremap <Leader>4 :Heading4<CR>
+    nnoremap <Leader>5 :Heading5<CR>
+    nnoremap <Leader>6 :Heading6<CR>
 
-nnoremap <Leader>b :Blod<CR>
-nnoremap <Leader>i :Italics<CR>
-nnoremap <Leader>m :Monospace<CR>
-nnoremap <Leader>h :Hotlink<CR>
+    inoremap <M>b :Blod<CR>
+    inoremap <M>i :Italics<CR>
+    inoremap <M>m :Monospace<CR>
+    inoremap <M>h :Hotlink<CR>
 
 " END
