@@ -24,3 +24,14 @@ echo v > 5 ? "v is >5" : "v is <5"
 
 echo v:version
 
+function Show(start, ...)
+  echohl Title
+  echo "start is " . a:start
+  echohl None
+  let index = 1
+  while index <= a:0
+    echo "  Arg " . index . " is " . a:{index}
+    let index = index + 1
+  endwhile
+  echo ""
+endfunction

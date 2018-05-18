@@ -34,5 +34,6 @@ if !exists("g:asciidoc_no_mappings") || ! g:asciidoc_no_mappings
     inoremap <M>i :Italics<CR>
     inoremap <M>m :Monospace<CR>
     inoremap <M>h :Hotlink<CR>
+endif
 
 " END
